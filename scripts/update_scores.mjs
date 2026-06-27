@@ -39,7 +39,7 @@ const matches = games
 
     return {
       id,
-      time: game.utc_date || game.date || game.datetime || null,
+      time: game.utc_date || game.date || game.datetime || game.local_date || null,
       venue: game.stadium_name_en || game.stadium || '',
       status: finished ? 'final' : (game.time_elapsed || 'scheduled'),
       teams: [
