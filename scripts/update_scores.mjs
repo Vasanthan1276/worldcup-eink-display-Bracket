@@ -4,52 +4,111 @@
  * latest successful response into public/data/live.json, so the display keeps
  * working when the public API is unavailable from the e-ink browser.
  */
+```js
 import { writeFile } from 'node:fs/promises';
 
-const target = 'public/data/live.json';
-const url = 'https://worldcup26.ir/get/games';
+const API =
+  'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?limit=500&dates=20260601-20260731';
 
-const response = await fetch(url, {
+const TARGET = 'public/data/live.json';
+
+const phaseConfig = {
+  r32:   { base: 73,  count: 16 },
+  r16:   { base: 89,  count: 8 },
+  qf:    { base: 97,  count: 4 },
+  sf:    { base: 101, count: 2 },
+  third: { base: 103, count: 1 },
+  final: { base: 104, count: 1 }
+};
+
+function phaseOf(event) {
+  const text = [
+    event.season?.type?.slug,
+    event.competitions?.[0]?.altGameNote,
+    event.name
+  ].filter(Boolean).join(' ').toLowerCase();
+
+  if (text.includes('round-of-32') || text.includes('round of 32')) return 'r32';
+  if (text.includes('round-of-16') || text.includes('round of 16')) return 'r16';
+  if (text.includes('quarter')) return 'qf';
+  if (text.includes('semi')) return 'sf';
+  if (text.includes('third-place') || text.includes('third place')) return 'third';
+  if (text.includes('final')) return 'final';
+
+  return null;
+}
+
+function statusOf(event) {
+  const type = event.status?.type;
+
+  if (type?.completed) return 'final';
+  if (type?.state === 'in') return 'live';
+
+  return 'scheduled';
+}
+
+function teamsOf(event) {
+  const competitors = [...(event.competitions?.[0]?.competitors || [])]
+    .sort((a, b) => {
+      if (a.homeAway === 'home') return -1;
+      if (b.homeAway === 'home') return 1;
+      return 0;
+    });
+
+  return competitors.slice(0, 2).map(team => ({
+    name: team.team?.displayName || 'TBD',
+    score: team.score ?? '–',
+    winner: Boolean(team.winner)
+  }));
+}
+
+const response = await fetch(API, {
   headers: { 'user-agent': 'worldcup-eink-display/1.0' }
 });
 
 if (!response.ok) {
-  throw new Error(`World Cup API failed: ${response.status}`);
+  throw new Error(`ESPN request failed: ${response.status}`);
 }
 
-const json = await response.json();
-const games = json.games || [];
+const data = await response.json();
+const grouped = { r32: [], r16: [], qf: [], sf: [], third: [], final: [] };
 
-const matches = games
-  .filter(game => Number(game.id) >= 73 && Number(game.id) <= 104)
-  .map(game => {
-    const id = `M${game.id}`;
+for (const event of data.events || []) {
+  const phase = phaseOf(event);
+  if (phase) grouped[phase].push(event);
+}
 
-    const home = game.home_team_name_en || game.home_team_label || 'TBD';
-    const away = game.away_team_name_en || game.away_team_label || 'TBD';
+for (const [phase, config] of Object.entries(phaseConfig)) {
+  grouped[phase].sort((a, b) => new Date(a.date) - new Date(b.date));
 
-    const homeScore = game.home_score ?? '–';
-    const awayScore = game.away_score ?? '–';
+  if (grouped[phase].length < config.count) {
+    throw new Error(
+      `ESPN returned only ${grouped[phase].length} ${phase} matches; expected ${config.count}.`
+    );
+  }
+}
 
-    const finished = String(game.finished).toUpperCase() === 'TRUE';
+const matches = [];
 
-    let winner = null;
-    if (finished && Number(homeScore) > Number(awayScore)) winner = home;
-    if (finished && Number(awayScore) > Number(homeScore)) winner = away;
+for (const [phase, config] of Object.entries(phaseConfig)) {
+  grouped[phase]
+    .slice(0, config.count)
+    .forEach((event, index) => {
+      const teams = teamsOf(event);
+      const winner = teams.find(team => team.winner)?.name || null;
 
-    return {
-      id,
-      time: game.utc_date || game.date || game.datetime || game.local_date || null,
-      venue: game.stadium_name_en || game.stadium || '',
-      status: finished ? 'final' : (game.time_elapsed || 'scheduled'),
-      teams: [
-        { name: home, score: homeScore, winner: winner === home },
-        { name: away, score: awayScore, winner: winner === away }
-      ],
-      winner
-    };
-  })
-  .sort((a, b) => Number(a.id.slice(1)) - Number(b.id.slice(1)));
+      matches.push({
+        id: `M${config.base + index}`,
+        time: event.date,
+        venue: event.competitions?.[0]?.venue?.fullName || '',
+        status: statusOf(event),
+        teams,
+        winner
+      });
+    });
+}
+
+matches.sort((a, b) => Number(a.id.slice(1)) - Number(b.id.slice(1)));
 
 const updatedAt = new Intl.DateTimeFormat('en-GB', {
   timeZone: 'Asia/Singapore',
@@ -59,6 +118,9 @@ const updatedAt = new Intl.DateTimeFormat('en-GB', {
 }).format(new Date()).replace(',', ' · ') + ' SGT';
 
 await writeFile(
-  target,
+  TARGET,
   JSON.stringify({ updatedAt, matches }, null, 2) + '\n'
 );
+
+console.log(`Updated ${matches.length} knockout matches.`);
+```
