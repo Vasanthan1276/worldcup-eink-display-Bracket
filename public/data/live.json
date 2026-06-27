@@ -1,12 +1,117 @@
 {
-  "updatedAt": "28 Jun 2026 06:50 SGT",
+  "updatedAt": "28 Jun 2026 ·  07:20 SGT",
   "matches": [
-    {"id":"M73","time":"2026-06-29T03:00:00+08:00","venue":"Round of 32","status":"scheduled","teams":[{"name":"South Africa","score":"–"},{"name":"Canada","score":"–"}]},
-    {"id":"M74","time":"2026-06-29T11:00:00+08:00","venue":"Round of 32","status":"scheduled","teams":[{"name":"Germany","score":"–"},{"name":"Paraguay","score":"–"}]},
-    {"id":"M77","time":"2026-06-30T03:00:00+08:00","venue":"Round of 32","status":"scheduled","teams":[{"name":"Brazil","score":"–"},{"name":"Japan","score":"–"}]},
-    {"id":"M78","time":"2026-06-30T11:00:00+08:00","venue":"Round of 32","status":"scheduled","teams":[{"name":"France","score":"–"},{"name":"Sweden","score":"–"}]},
-    {"id":"M81","time":"2026-07-01T03:00:00+08:00","venue":"Round of 32","status":"scheduled","teams":[{"name":"Argentina","score":"–"},{"name":"Cape Verde","score":"–"}]},
-    {"id":"M104","time":"2026-07-20T03:00:00+08:00","venue":"MetLife Stadium","status":"scheduled","teams":[{"name":"Winner M101","score":"–"},{"name":"Winner M102","score":"–"}]},
-    {"id":"M103","time":"2026-07-19T03:00:00+08:00","venue":"Third-place play-off","status":"scheduled","teams":[{"name":"Loser M101","score":"–"},{"name":"Loser M102","score":"–"}]}
+    {
+      "id": "M73",
+      "time": "2026-06-29T03:00:00+08:00",
+      "venue": "Round of 32",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "South Africa",
+          "score": "–"
+        },
+        {
+          "name": "Canada",
+          "score": "–"
+        }
+      ]
+    },
+    {
+      "id": "M74",
+      "time": "2026-06-29T11:00:00+08:00",
+      "venue": "Round of 32",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Germany",
+          "score": "–"
+        },
+        {
+          "name": "Paraguay",
+          "score": "–"
+        }
+      ]
+    },
+    {
+      "id": "M77",
+      "time": "2026-06-30T03:00:00+08:00",
+      "venue": "Round of 32",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Brazil",
+          "score": "–"
+        },
+        {
+          "name": "Japan",
+          "score": "–"
+        }
+      ]
+    },
+    {
+      "id": "M78",
+      "time": "2026-06-30T11:00:00+08:00",
+      "venue": "Round of 32",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "France",
+          "score": "–"
+        },
+        {
+          "name": "Sweden",
+          "score": "–"
+        }
+      ]
+    },
+    {
+      "id": "M81",
+      "time": "2026-07-01T03:00:00+08:00",
+      "venue": "Round of 32",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Argentina",
+          "score": "–"
+        },
+        {
+          "name": "Cape Verde",
+          "score": "–"
+        }
+      ]
+    },
+    {
+      "id": "M103",
+      "time": "2026-07-19T03:00:00+08:00",
+      "venue": "Third-place play-off",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Loser M101",
+          "score": "–"
+        },
+        {
+          "name": "Loser M102",
+          "score": "–"
+        }
+      ]
+    },
+    {
+      "id": "M104",
+      "time": "2026-07-20T03:00:00+08:00",
+      "venue": "MetLife Stadium",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Winner M101",
+          "score": "–"
+        },
+        {
+          "name": "Winner M102",
+          "score": "–"
+        }
+      ]
+    }
   ]
 }
