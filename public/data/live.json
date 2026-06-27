@@ -1,9 +1,9 @@
 {
-  "updatedAt": "28 Jun 2026 ·  07:25 SGT",
+  "updatedAt": "28 Jun 2026 ·  07:38 SGT",
   "matches": [
     {
       "id": "M73",
-      "time": "06/28/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -22,7 +22,7 @@
     },
     {
       "id": "M74",
-      "time": "06/29/2026 16:30",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -41,7 +41,7 @@
     },
     {
       "id": "M75",
-      "time": "06/29/2026 19:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -60,7 +60,7 @@
     },
     {
       "id": "M76",
-      "time": "06/29/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -79,7 +79,7 @@
     },
     {
       "id": "M77",
-      "time": "06/30/2026 17:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -98,7 +98,7 @@
     },
     {
       "id": "M78",
-      "time": "06/30/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -117,7 +117,7 @@
     },
     {
       "id": "M79",
-      "time": "06/30/2026 19:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -136,7 +136,7 @@
     },
     {
       "id": "M80",
-      "time": "07/01/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -155,7 +155,7 @@
     },
     {
       "id": "M81",
-      "time": "07/01/2026 17:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -174,7 +174,7 @@
     },
     {
       "id": "M82",
-      "time": "07/01/2026 13:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -193,7 +193,7 @@
     },
     {
       "id": "M83",
-      "time": "07/02/2026 19:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -212,7 +212,7 @@
     },
     {
       "id": "M84",
-      "time": "07/02/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -231,7 +231,7 @@
     },
     {
       "id": "M85",
-      "time": "07/02/2026 20:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -250,7 +250,7 @@
     },
     {
       "id": "M86",
-      "time": "07/03/2026 18:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -269,7 +269,7 @@
     },
     {
       "id": "M87",
-      "time": "07/03/2026 20:30",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -288,7 +288,7 @@
     },
     {
       "id": "M88",
-      "time": "07/03/2026 13:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -307,7 +307,7 @@
     },
     {
       "id": "M89",
-      "time": "07/04/2026 17:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -326,7 +326,7 @@
     },
     {
       "id": "M90",
-      "time": "07/04/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -345,7 +345,7 @@
     },
     {
       "id": "M91",
-      "time": "07/05/2026 16:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -364,7 +364,7 @@
     },
     {
       "id": "M92",
-      "time": "07/05/2026 18:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -383,7 +383,7 @@
     },
     {
       "id": "M93",
-      "time": "07/06/2026 14:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -402,7 +402,7 @@
     },
     {
       "id": "M94",
-      "time": "07/06/2026 17:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -421,7 +421,7 @@
     },
     {
       "id": "M95",
-      "time": "07/07/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -440,7 +440,7 @@
     },
     {
       "id": "M96",
-      "time": "07/07/2026 13:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -459,7 +459,7 @@
     },
     {
       "id": "M97",
-      "time": "07/09/2026 16:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -478,7 +478,7 @@
     },
     {
       "id": "M98",
-      "time": "07/10/2026 12:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -497,7 +497,7 @@
     },
     {
       "id": "M99",
-      "time": "07/11/2026 17:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -516,7 +516,7 @@
     },
     {
       "id": "M100",
-      "time": "07/11/2026 20:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -535,7 +535,7 @@
     },
     {
       "id": "M101",
-      "time": "07/14/2026 14:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -554,7 +554,7 @@
     },
     {
       "id": "M102",
-      "time": "07/15/2026 15:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -573,7 +573,7 @@
     },
     {
       "id": "M103",
-      "time": "07/18/2026 17:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
@@ -592,7 +592,7 @@
     },
     {
       "id": "M104",
-      "time": "07/19/2026 15:00",
+      "time": null,
       "venue": "",
       "status": "notstarted",
       "teams": [
