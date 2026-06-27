@@ -4,20 +4,61 @@
  * latest successful response into public/data/live.json, so the display keeps
  * working when the public API is unavailable from the e-ink browser.
  */
-import { readFile, writeFile } from 'node:fs/promises';
-const url='https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?limit=500&dates=20260601-20260731';
-const target='public/data/live.json';
-const feed=await fetch(url,{headers:{'user-agent':'worldcup-eink-display/1.0'}});
-if(!feed.ok) throw new Error(`Live score feed failed: ${feed.status}`);
-const json=await feed.json();
-const current=JSON.parse(await readFile(target,'utf8'));
-function number(event){const text=[event.name,event.shortName,event.notes?.[0]?.headline,event.competitions?.[0]?.notes?.[0]?.headline].filter(Boolean).join(' ');const hit=text.match(/(?:match|game)\s*(\d{2,3})/i);return hit?'M'+hit[1]:null;}
-const byId=new Map((current.matches||[]).map(m=>[m.id,m]));
-for(const event of json.events||[]){
-  const id=number(event); if(!id) continue;
-  const c=event.competitions?.[0], competitors=c?.competitors||[]; if(competitors.length<2) continue;
-  const teams=competitors.sort((a,b)=>a.homeAway==='home'?-1:1).map(x=>({name:x.team?.displayName||'TBD',score:x.score??'–',winner:!!x.winner}));
-  byId.set(id,{id,time:event.date,venue:c?.venue?.fullName||'',status:event.status?.type?.completed?'final':event.status?.type?.state||'scheduled',teams,winner:teams.find(t=>t.winner)?.name||null});
+import { writeFile } from 'node:fs/promises';
+
+const target = 'public/data/live.json';
+const url = 'https://worldcup26.ir/get/games';
+
+const response = await fetch(url, {
+  headers: { 'user-agent': 'worldcup-eink-display/1.0' }
+});
+
+if (!response.ok) {
+  throw new Error(`World Cup API failed: ${response.status}`);
 }
-const output={updatedAt:new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Singapore',dateStyle:'medium',timeStyle:'short',hour12:false}).format(new Date()).replace(',',' · ')+' SGT',matches:[...byId.values()].sort((a,b)=>Number(a.id.slice(1))-Number(b.id.slice(1)))};
-await writeFile(target,JSON.stringify(output,null,2)+'\n');
+
+const json = await response.json();
+const games = json.games || [];
+
+const matches = games
+  .filter(game => Number(game.id) >= 73 && Number(game.id) <= 104)
+  .map(game => {
+    const id = `M${game.id}`;
+
+    const home = game.home_team_name_en || game.home_team_label || 'TBD';
+    const away = game.away_team_name_en || game.away_team_label || 'TBD';
+
+    const homeScore = game.home_score ?? '–';
+    const awayScore = game.away_score ?? '–';
+
+    const finished = String(game.finished).toUpperCase() === 'TRUE';
+
+    let winner = null;
+    if (finished && Number(homeScore) > Number(awayScore)) winner = home;
+    if (finished && Number(awayScore) > Number(homeScore)) winner = away;
+
+    return {
+      id,
+      time: game.local_date || null,
+      venue: game.stadium_name_en || game.stadium || '',
+      status: finished ? 'final' : (game.time_elapsed || 'scheduled'),
+      teams: [
+        { name: home, score: homeScore, winner: winner === home },
+        { name: away, score: awayScore, winner: winner === away }
+      ],
+      winner
+    };
+  })
+  .sort((a, b) => Number(a.id.slice(1)) - Number(b.id.slice(1)));
+
+const updatedAt = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Asia/Singapore',
+  dateStyle: 'medium',
+  timeStyle: 'short',
+  hour12: false
+}).format(new Date()).replace(',', ' · ') + ' SGT';
+
+await writeFile(
+  target,
+  JSON.stringify({ updatedAt, matches }, null, 2) + '\n'
+);
