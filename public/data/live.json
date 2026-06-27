@@ -1,117 +1,613 @@
 {
-  "updatedAt": "28 Jun 2026 ·  07:20 SGT",
+  "updatedAt": "28 Jun 2026 ·  07:25 SGT",
   "matches": [
     {
       "id": "M73",
-      "time": "2026-06-29T03:00:00+08:00",
-      "venue": "Round of 32",
-      "status": "scheduled",
+      "time": "06/28/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
       "teams": [
         {
           "name": "South Africa",
-          "score": "–"
+          "score": "0",
+          "winner": false
         },
         {
           "name": "Canada",
-          "score": "–"
+          "score": "0",
+          "winner": false
         }
-      ]
+      ],
+      "winner": null
     },
     {
       "id": "M74",
-      "time": "2026-06-29T11:00:00+08:00",
-      "venue": "Round of 32",
-      "status": "scheduled",
+      "time": "06/29/2026 16:30",
+      "venue": "",
+      "status": "notstarted",
       "teams": [
         {
           "name": "Germany",
-          "score": "–"
+          "score": "0",
+          "winner": false
         },
         {
           "name": "Paraguay",
-          "score": "–"
+          "score": "0",
+          "winner": false
         }
-      ]
+      ],
+      "winner": null
     },
     {
-      "id": "M77",
-      "time": "2026-06-30T03:00:00+08:00",
-      "venue": "Round of 32",
-      "status": "scheduled",
+      "id": "M75",
+      "time": "06/29/2026 19:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Netherlands",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Morocco",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M76",
+      "time": "06/29/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
       "teams": [
         {
           "name": "Brazil",
-          "score": "–"
+          "score": "0",
+          "winner": false
         },
         {
           "name": "Japan",
-          "score": "–"
+          "score": "0",
+          "winner": false
         }
-      ]
+      ],
+      "winner": null
     },
     {
-      "id": "M78",
-      "time": "2026-06-30T11:00:00+08:00",
-      "venue": "Round of 32",
-      "status": "scheduled",
+      "id": "M77",
+      "time": "06/30/2026 17:00",
+      "venue": "",
+      "status": "notstarted",
       "teams": [
         {
           "name": "France",
-          "score": "–"
+          "score": "0",
+          "winner": false
         },
         {
-          "name": "Sweden",
-          "score": "–"
+          "name": "3rd Group C/D/F/G/H",
+          "score": "0",
+          "winner": false
         }
-      ]
+      ],
+      "winner": null
+    },
+    {
+      "id": "M78",
+      "time": "06/30/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Ivory Coast",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Norway",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M79",
+      "time": "06/30/2026 19:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Mexico",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "3rd Group C/E/F/H/I",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M80",
+      "time": "07/01/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Belgium",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "3rd Group E/H/I/J/K",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
     },
     {
       "id": "M81",
-      "time": "2026-07-01T03:00:00+08:00",
-      "venue": "Round of 32",
-      "status": "scheduled",
+      "time": "07/01/2026 17:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "United States",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Bosnia and Herzegovina",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M82",
+      "time": "07/01/2026 13:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Group G",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "3rd Group A/E/H/I/J",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M83",
+      "time": "07/02/2026 19:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Runner-up Group K",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Runner-up Group L",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M84",
+      "time": "07/02/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Group H",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Runner-up Group J",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M85",
+      "time": "07/02/2026 20:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Switzerland",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "3rd Group E/F/G/I/J",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M86",
+      "time": "07/03/2026 18:00",
+      "venue": "",
+      "status": "notstarted",
       "teams": [
         {
           "name": "Argentina",
-          "score": "–"
+          "score": "0",
+          "winner": false
         },
         {
           "name": "Cape Verde",
-          "score": "–"
+          "score": "0",
+          "winner": false
         }
-      ]
+      ],
+      "winner": null
+    },
+    {
+      "id": "M87",
+      "time": "07/03/2026 20:30",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Group K",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "3rd Group D/E/I/J/L",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M88",
+      "time": "07/03/2026 13:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Australia",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Egypt",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M89",
+      "time": "07/04/2026 17:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 74",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 77",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M90",
+      "time": "07/04/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 73",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 75",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M91",
+      "time": "07/05/2026 16:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 76",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 78",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M92",
+      "time": "07/05/2026 18:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 79",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 80",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M93",
+      "time": "07/06/2026 14:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 83",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 84",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M94",
+      "time": "07/06/2026 17:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 81",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 82",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M95",
+      "time": "07/07/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 86",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 88",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M96",
+      "time": "07/07/2026 13:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 85",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 87",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M97",
+      "time": "07/09/2026 16:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 89",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 90",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M98",
+      "time": "07/10/2026 12:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 93",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 94",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M99",
+      "time": "07/11/2026 17:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 91",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 92",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M100",
+      "time": "07/11/2026 20:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 95",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 96",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M101",
+      "time": "07/14/2026 14:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 97",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 98",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M102",
+      "time": "07/15/2026 15:00",
+      "venue": "",
+      "status": "notstarted",
+      "teams": [
+        {
+          "name": "Winner Match 99",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Winner Match 100",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
     },
     {
       "id": "M103",
-      "time": "2026-07-19T03:00:00+08:00",
-      "venue": "Third-place play-off",
-      "status": "scheduled",
+      "time": "07/18/2026 17:00",
+      "venue": "",
+      "status": "notstarted",
       "teams": [
         {
-          "name": "Loser M101",
-          "score": "–"
+          "name": "Loser Match 101",
+          "score": "0",
+          "winner": false
         },
         {
-          "name": "Loser M102",
-          "score": "–"
+          "name": "Loser Match 102",
+          "score": "0",
+          "winner": false
         }
-      ]
+      ],
+      "winner": null
     },
     {
       "id": "M104",
-      "time": "2026-07-20T03:00:00+08:00",
-      "venue": "MetLife Stadium",
-      "status": "scheduled",
+      "time": "07/19/2026 15:00",
+      "venue": "",
+      "status": "notstarted",
       "teams": [
         {
-          "name": "Winner M101",
-          "score": "–"
+          "name": "Winner Match 101",
+          "score": "0",
+          "winner": false
         },
         {
-          "name": "Winner M102",
-          "score": "–"
+          "name": "Winner Match 102",
+          "score": "0",
+          "winner": false
         }
-      ]
+      ],
+      "winner": null
     }
   ]
 }
