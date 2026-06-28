@@ -1,11 +1,11 @@
 {
-  "updatedAt": "29 Jun 2026 ·  03:40 SGT",
+  "updatedAt": "29 Jun 2026 ·  05:11 SGT",
   "matches": [
     {
       "id": "M73",
       "time": "2026-06-28T19:00Z",
       "venue": "SoFi Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "South Africa",
@@ -14,11 +14,11 @@
         },
         {
           "name": "Canada",
-          "score": "0",
-          "winner": false
+          "score": "1",
+          "winner": true
         }
       ],
-      "winner": null
+      "winner": "Canada"
     },
     {
       "id": "M74",
