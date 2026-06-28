@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071426">
+<title>World Cup 2026 · Home Assistant</title>
+<style>
+
+:root{
+  --bg:#071426;
+  --panel:#0c2039;
+  --panel2:#102b4c;
+  --line:rgba(179,211,248,.24);
+  --text:#f6f9ff;
+  --muted:#a9bdd5;
+  --accent:#4db4ff;
+  --accent2:#9cdbff;
+  --winner:#1a664f;
+  --winnerText:#dffff0;
+  --final:#f6bc3d;
+  --danger:#ff8c8c;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+body{padding:10px}
+.dashboard{max-width:1540px;margin:0 auto;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#0b1c32,#061220);box-shadow:0 15px 34px rgba(0,0,0,.28)}
+.head{padding:15px 18px 13px;background:linear-gradient(105deg,#123f6c,#0c2442 55%,#071527);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.title{font-weight:900;font-size:clamp(18px,2.2vw,30px);letter-spacing:.2px;line-height:1.05}
+.sub{margin-top:5px;color:var(--accent2);font-size:clamp(9px,1vw,12px);font-weight:800;letter-spacing:.85px}
+.updated{min-width:132px;padding:7px 9px;border:1px solid rgba(137,205,255,.43);border-radius:9px;background:rgba(0,0,0,.18);font-size:10px;line-height:1.45;text-align:right;color:var(--muted)}
+.updated b{font-size:11px;color:#dff4ff;letter-spacing:.45px}
+.grid{padding:13px;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px;align-items:stretch}
+.col{min-width:0}.label{height:25px;border-radius:7px 7px 0 0;background:#123252;border:1px solid var(--line);border-bottom:0;padding:7px 7px 5px;color:#d6ebff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:clamp(7px,.68vw,10px);font-weight:900;text-transform:uppercase;letter-spacing:.35px}.slots{height:386px;position:relative;background:rgba(3,14,26,.36);border:1px solid var(--line);border-radius:0 0 7px 7px}
+.match{position:absolute;width:calc(100% - 8px);left:4px;min-height:39px;padding:4px 5px;border:1px solid rgba(185,216,249,.35);border-radius:5px;background:linear-gradient(145deg,#143555,#0d2642);box-shadow:0 2px 5px rgba(0,0,0,.18);overflow:hidden}.match.final{left:4px;width:calc(100% - 8px);min-height:76px;padding:6px;border:2px solid var(--final);background:linear-gradient(145deg,#35415a,#1b2944);box-shadow:0 0 0 2px rgba(246,188,61,.14)}
+.meta{font-size:clamp(5px,.47vw,7px);line-height:1.35;color:#a9c9e6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.team{font-size:clamp(7px,.60vw,10px);line-height:1.35;font-weight:800;display:grid;grid-template-columns:minmax(0,1fr) 14px;gap:2px;padding:1px 2px;border-radius:3px}.team .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.team.winner{background:var(--winner);color:var(--winnerText)}.pending .name{color:#a9bdd5;font-weight:700}.score{text-align:right;font-weight:950;color:#fff}.centre{text-align:center;min-width:0}.centre .label{background:#62491b;color:#fff3c7}.trophy{font-size:clamp(25px,3.1vw,43px);line-height:1;margin-top:76px;filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}.final-title{font-size:clamp(8px,.72vw,11px);font-weight:950;color:#fff3c7;margin:8px 0 8px;letter-spacing:.35px}.final-note{font-size:clamp(6px,.53vw,8px);line-height:1.4;color:var(--muted);margin-top:9px}.foot{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:10px 16px;color:var(--muted);font-size:11px;font-weight:700}.control{position:fixed;right:16px;bottom:16px;border:1px solid rgba(189,226,255,.56);border-radius:999px;background:#1578bf;color:#fff;padding:9px 13px;font:700 12px Inter,Arial,sans-serif;cursor:pointer;box-shadow:0 5px 16px rgba(0,0,0,.34)}
+@media(max-width:920px){body{padding:8px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:10px}.col{border:1px solid var(--line);border-radius:8px;background:rgba(5,17,31,.45);overflow:hidden}.label{border:0;border-radius:0;height:auto;min-height:30px}.slots{height:auto;position:static;display:grid;gap:7px;padding:7px;border:0;border-radius:0;background:transparent}.match,.match.final{position:relative!important;left:auto;width:100%;min-height:45px;top:auto!important}.centre{grid-column:1/-1;padding-bottom:10px}.centre .label{margin:0}.trophy{margin-top:13px}.final-title{margin:6px 0}.foot{font-size:10px;flex-wrap:wrap}.control{display:none}}
+@media(max-width:520px){body{padding:0}.dashboard{border-radius:0;border-left:0;border-right:0}.head{padding:14px 12px;gap:8px}.updated{min-width:110px;font-size:8px;padding:6px}.updated b{font-size:9px}.grid{grid-template-columns:1fr;padding:9px}.centre{grid-column:auto}.team{font-size:10px;grid-template-columns:minmax(0,1fr) 18px}.meta{font-size:8px}.foot{padding:10px 12px}}
+@media print{body{background:#fff;padding:0}.dashboard{box-shadow:none;border:0}.control{display:none}}
+
+</style>
+</head>
+<body>
+<main class="dashboard" aria-label="World Cup 2026 live knockout bracket">
+<header class="head">
+  <div>
+    <div class="title">WORLD CUP 2026 · ROAD TO THE FINAL</div>
+    <div class="sub">LIVE KNOCKOUT BRACKET · SINGAPORE TIME (SGT)</div>
+  </div>
+  <div class="updated" id="status"><b>LOADING LIVE SCORES</b><br>Preparing bracket…</div>
+</header>
+<section class="grid" id="bracket"></section>
+<footer class="foot"><span>Scores update automatically. Winners are highlighted.</span><span id="source">Live feed + local fallback</span></footer>
+</main>
+<button class="control" onclick="location.reload()">Refresh</button>
+<script>
+(() => {
+  const SGT = 'Asia/Singapore';
+
+  const API =
+    'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?limit=500&dates=20260601-20260731';
+
+  const fallbackUrl = './public/data/live.json';
+
+  const leftR32 = ['M73','M74','M77','M78','M81','M82','M85','M86'];
+  const rightR32 = ['M75','M76','M79','M80','M83','M84','M87','M88'];
+
+  const cfg = {};
+
+  for(let n=73;n<=88;n++){
+    cfg['M'+n]={id:'M'+n,round:'R32'};
+  }
+
+  for(let n=89;n<=96;n++){
+    cfg['M'+n]={
+      id:'M'+n,
+      round:'R16',
+      parents:[
+        'M'+(73+(n-89)*2),
+        'M'+(74+(n-89)*2)
+      ]
+    };
+  }
+
+  cfg.M97={id:'M97',round:'QF',parents:['M89','M91']};
+  cfg.M98={id:'M98',round:'QF',parents:['M90','M92']};
+  cfg.M99={id:'M99',round:'QF',parents:['M93','M95']};
+  cfg.M100={id:'M100',round:'QF',parents:['M94','M96']};
+
+  cfg.M101={id:'M101',round:'SF',parents:['M97','M99']};
+  cfg.M102={id:'M102',round:'SF',parents:['M98','M100']};
+
+  cfg.M103={id:'M103',round:'3rd',parents:['M101','M102']};
+  cfg.M104={id:'M104',round:'Final',parents:['M101','M102']};
+
+  const state = {};
+
+  Object.values(cfg).forEach(x => {
+    state[x.id]={
+      ...x,
+      teams:[null,null],
+      score:['–','–'],
+      status:'scheduled',
+      time:null,
+      venue:'',
+      winner:null
+    };
+  });
+
+  function asSGT(iso){
+    if(!iso) return '';
+
+    try{
+      return new Intl.DateTimeFormat('en-GB',{
+        timeZone:SGT,
+        day:'2-digit',
+        month:'short',
+        hour:'2-digit',
+        minute:'2-digit',
+        hour12:false
+      }).format(new Date(iso)).replace(',',' · ');
+    }catch{
+      return '';
+    }
+  }
+
+  function short(name){
+    return (name||'TBD')
+      .replace(/^Winner\s+/i,'W ')
+      .replace(/^Loser\s+/i,'L ');
+  }
+
+  function eventMatchNo(ev){
+    const hay=[
+      ev.name,
+      ev.shortName,
+      ev.notes?.[0]?.headline,
+      ev.competitions?.[0]?.notes?.[0]?.headline
+    ].filter(Boolean).join(' ');
+
+    const m=hay.match(/(?:match|game)\s*(\d{2,3})/i);
+
+    if(m) return 'M'+m[1];
+
+    return null;
+  }
+
+  function applyRecord(rec){
+    const m=state[rec.id];
+    if(!m) return;
+
+    m.time=rec.time||m.time;
+    m.venue=rec.venue||m.venue;
+    m.status=rec.status||m.status;
+
+    if(Array.isArray(rec.teams)){
+      m.teams=rec.teams.map(t => t ? {
+        name:t.name||t.displayName||'TBD',
+        score:t.score ?? '–',
+        winner:!!t.winner
+      } : null);
+
+      m.score=m.teams.map(t => t?.score ?? '–');
+    }
+
+    if(rec.winner){
+      m.winner=rec.winner;
+    }
+  }
+
+  function derive(){
+    for(const id of Object.keys(state)){
+      const m=state[id];
+
+      if(!m.parents) continue;
+
+      m.parents.forEach((p,i) => {
+        const pm=state[p];
+
+        if(pm?.winner && !m.teams[i]){
+          m.teams[i]={
+            name:pm.winner,
+            score:'–',
+            winner:false
+          };
+        }
+
+        if(!m.teams[i]){
+          m.teams[i]={
+            name:'Winner '+p,
+            score:'–',
+            winner:false
+          };
+        }
+      });
+    }
+  }
+
+  function matchHTML(id,top,cls=''){
+    const m=state[id];
+    const teams=m.teams||[];
+
+    const a=teams[0]||{name:'TBD',score:'–'};
+    const b=teams[1]||{name:'TBD',score:'–'};
+
+    const meta=[
+      id,
+      m.time?asSGT(m.time):'',
+      m.venue
+    ].filter(Boolean).join(' · ');
+
+    const row=t => `
+      <div class="team ${t.winner?'winner':''} ${/^(TBD|Winner )/.test(t.name)?'pending':''}">
+        <span class="name">${short(t.name)}</span>
+        <span class="score">${t.score ?? '–'}</span>
+      </div>`;
+
+    return `
+      <div class="match ${cls}" style="top:${top}px">
+        <div class="meta">${meta||id}</div>
+        ${row(a)}
+        ${row(b)}
+      </div>`;
+  }
+
+  function column(label,ids,tops,cls=''){
+    return `
+      <div class="col ${cls}">
+        <div class="label">${label}</div>
+        <div class="slots">
+          ${ids.map((id,i)=>matchHTML(id,tops[i])).join('')}
+        </div>
+      </div>`;
+  }
+
+  function render(){
+    derive();
+
+    const r32tops=[2,47,92,137,182,227,272,317];
+    const r16tops=[25,115,205,295];
+    const qftops=[70,250];
+
+    document.getElementById('bracket').innerHTML =
+      column('Round of 32 · Route A',leftR32,r32tops) +
+      column('Round of 16',['M89','M91','M93','M95'],r16tops) +
+      column('Quarter-finals',['M97','M99'],qftops) +
+      column('Semi-finals',['M101'],[158]) +
+
+      `<div class="col centre">
+        <div class="label">Final</div>
+        <div class="trophy">★</div>
+        <div class="final-title">WORLD CUP FINAL</div>
+        ${matchHTML('M104',0,'final')}
+        <div class="final-note">
+          Third-place match<br>
+          ${state.M103.time?asSGT(state.M103.time):'M103 · 19 JUL'}
+        </div>
+      </div>` +
+
+      column('Semi-finals',['M102'],[158]) +
+      column('Quarter-finals',['M98','M100'],qftops) +
+      column('Round of 16',['M90','M92','M94','M96'],r16tops) +
+      column('Round of 32 · Route B',rightR32,r32tops);
+  }
+
+  function setStatus(text,detail){
+    document.getElementById('status').innerHTML=
+      `<b>${text}</b><br>${detail}`;
+  }
+
+  function stamp(){
+    return new Intl.DateTimeFormat('en-GB',{
+      timeZone:SGT,
+      hour:'2-digit',
+      minute:'2-digit',
+      hour12:false,
+      day:'2-digit',
+      month:'short'
+    }).format(new Date()).replace(',',' · ');
+  }
+
+  async function loadFallback(){
+    const r=await fetch(
+      fallbackUrl+'?v='+Date.now(),
+      {cache:'no-store'}
+    );
+
+    if(!r.ok) throw Error('fallback unavailable');
+
+    const j=await r.json();
+
+    (j.matches||[]).forEach(applyRecord);
+
+    return j.updatedAt||null;
+  }
+
+  function mapEspn(j){
+    let count=0;
+
+    (j.events||[]).forEach(ev => {
+      const id=eventMatchNo(ev);
+
+      if(!id || !state[id]) return;
+
+      const c=ev.competitions?.[0];
+      const cc=c?.competitors||[];
+
+      if(cc.length<2) return;
+
+      const teams=cc
+        .sort((x,y)=>(x.homeAway==='home'?-1:1))
+        .map(x => ({
+          name:x.team?.displayName||x.team?.shortDisplayName||'TBD',
+          score:x.score??'–',
+          winner:!!x.winner
+        }));
+
+      const complete=ev.status?.type?.completed;
+      const winner=teams.find(t=>t.winner)?.name||null;
+
+      applyRecord({
+        id,
+        time:ev.date,
+        venue:c?.venue?.fullName,
+        status:complete?'final':ev.status?.type?.state,
+        teams,
+        winner
+      });
+
+      count++;
+    });
+
+    return count;
+  }
+
+  async function boot(){
+    let localAt=null;
+
+    try{
+      localAt=await loadFallback();
+    }catch(e){}
+
+    render();
+
+    setStatus(
+      'LIVE BRACKET',
+      localAt?`Cached ${localAt}`:`Updated ${stamp()}`
+    );
+
+    try{
+      const r=await fetch(API,{cache:'no-store'});
+
+      if(!r.ok) throw Error('live feed '+r.status);
+
+      const count=mapEspn(await r.json());
+
+      if(count){
+        render();
+        document.getElementById('source').textContent=
+          'Live feed · refreshed '+stamp();
+
+        setStatus('LIVE SCORES',`Updated ${stamp()}`);
+      }else{
+        document.getElementById('source').textContent=
+          'Local schedule · refreshed '+stamp();
+
+        setStatus('SCHEDULE MODE',`Updated ${stamp()}`);
+      }
+    }catch(e){
+      document.getElementById('source').textContent=
+        'Local fallback · refreshed '+stamp();
+
+      setStatus('OFFLINE FALLBACK',`Updated ${stamp()}`);
+    }
+  }
+
+  boot();
+  setInterval(boot,15*60*1000);
+})();
+</script>
+</body>
+</html>
