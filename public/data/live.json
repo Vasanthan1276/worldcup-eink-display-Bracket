@@ -1,11 +1,11 @@
 {
-  "updatedAt": "28 Jun 2026 ·  07:42 SGT",
+  "updatedAt": "28 Jun 2026 ·  08:11 SGT",
   "matches": [
     {
       "id": "M73",
-      "time": "06/28/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-06-28T19:00Z",
+      "venue": "SoFi Stadium",
+      "status": "scheduled",
       "teams": [
         {
           "name": "South Africa",
@@ -22,47 +22,9 @@
     },
     {
       "id": "M74",
-      "time": "06/29/2026 16:30",
-      "venue": "",
-      "status": "notstarted",
-      "teams": [
-        {
-          "name": "Germany",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Paraguay",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M75",
-      "time": "06/29/2026 19:00",
-      "venue": "",
-      "status": "notstarted",
-      "teams": [
-        {
-          "name": "Netherlands",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Morocco",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M76",
-      "time": "06/29/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-06-29T17:00Z",
+      "venue": "NRG Stadium",
+      "status": "scheduled",
       "teams": [
         {
           "name": "Brazil",
@@ -78,18 +40,18 @@
       "winner": null
     },
     {
-      "id": "M77",
-      "time": "06/30/2026 17:00",
-      "venue": "",
-      "status": "notstarted",
+      "id": "M75",
+      "time": "2026-06-29T20:30Z",
+      "venue": "Gillette Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "France",
+          "name": "Germany",
           "score": "0",
           "winner": false
         },
         {
-          "name": "3rd Group C/D/F/G/H",
+          "name": "Paraguay",
           "score": "0",
           "winner": false
         }
@@ -97,10 +59,29 @@
       "winner": null
     },
     {
-      "id": "M78",
-      "time": "06/30/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
+      "id": "M76",
+      "time": "2026-06-30T01:00Z",
+      "venue": "Estadio BBVA",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Netherlands",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Morocco",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M77",
+      "time": "2026-06-30T17:00Z",
+      "venue": "AT&T Stadium",
+      "status": "scheduled",
       "teams": [
         {
           "name": "Ivory Coast",
@@ -116,10 +97,29 @@
       "winner": null
     },
     {
+      "id": "M78",
+      "time": "2026-06-30T21:00Z",
+      "venue": "MetLife Stadium",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "France",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Sweden",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
       "id": "M79",
-      "time": "06/30/2026 19:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-01T01:00Z",
+      "venue": "Estadio Banorte",
+      "status": "scheduled",
       "teams": [
         {
           "name": "Mexico",
@@ -127,7 +127,7 @@
           "winner": false
         },
         {
-          "name": "3rd Group C/E/F/H/I",
+          "name": "Ecuador",
           "score": "0",
           "winner": false
         }
@@ -136,17 +136,17 @@
     },
     {
       "id": "M80",
-      "time": "07/01/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-01T16:00Z",
+      "venue": "Mercedes-Benz Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Belgium",
+          "name": "England",
           "score": "0",
           "winner": false
         },
         {
-          "name": "3rd Group E/H/I/J/K",
+          "name": "Third Place Group E/H/I/J/K",
           "score": "0",
           "winner": false
         }
@@ -155,17 +155,17 @@
     },
     {
       "id": "M81",
-      "time": "07/01/2026 17:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-01T20:00Z",
+      "venue": "Lumen Field",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "United States",
+          "name": "Belgium",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Bosnia and Herzegovina",
+          "name": "Third Place Group A/E/H/I/J",
           "score": "0",
           "winner": false
         }
@@ -174,17 +174,17 @@
     },
     {
       "id": "M82",
-      "time": "07/01/2026 13:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-02T00:00Z",
+      "venue": "Levi's Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Group G",
+          "name": "United States",
           "score": "0",
           "winner": false
         },
         {
-          "name": "3rd Group A/E/H/I/J",
+          "name": "Bosnia-Herzegovina",
           "score": "0",
           "winner": false
         }
@@ -193,17 +193,17 @@
     },
     {
       "id": "M83",
-      "time": "07/02/2026 19:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-02T19:00Z",
+      "venue": "SoFi Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Runner-up Group K",
+          "name": "Spain",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Runner-up Group L",
+          "name": "Group J 2nd Place",
           "score": "0",
           "winner": false
         }
@@ -212,17 +212,17 @@
     },
     {
       "id": "M84",
-      "time": "07/02/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-02T23:00Z",
+      "venue": "BMO Field",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Group H",
+          "name": "Group K 2nd Place",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Runner-up Group J",
+          "name": "Croatia",
           "score": "0",
           "winner": false
         }
@@ -231,9 +231,9 @@
     },
     {
       "id": "M85",
-      "time": "07/02/2026 20:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-03T03:00Z",
+      "venue": "BC Place",
+      "status": "scheduled",
       "teams": [
         {
           "name": "Switzerland",
@@ -241,7 +241,7 @@
           "winner": false
         },
         {
-          "name": "3rd Group E/F/G/I/J",
+          "name": "Third Place Group E/F/G/I/J",
           "score": "0",
           "winner": false
         }
@@ -250,47 +250,9 @@
     },
     {
       "id": "M86",
-      "time": "07/03/2026 18:00",
-      "venue": "",
-      "status": "notstarted",
-      "teams": [
-        {
-          "name": "Argentina",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Cape Verde",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M87",
-      "time": "07/03/2026 20:30",
-      "venue": "",
-      "status": "notstarted",
-      "teams": [
-        {
-          "name": "Winner Group K",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "3rd Group D/E/I/J/L",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M88",
-      "time": "07/03/2026 13:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-03T18:00Z",
+      "venue": "AT&T Stadium",
+      "status": "scheduled",
       "teams": [
         {
           "name": "Australia",
@@ -306,18 +268,56 @@
       "winner": null
     },
     {
-      "id": "M89",
-      "time": "07/04/2026 17:00",
-      "venue": "",
-      "status": "notstarted",
+      "id": "M87",
+      "time": "2026-07-03T22:00Z",
+      "venue": "Hard Rock Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 74",
+          "name": "Argentina",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 77",
+          "name": "Cape Verde",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M88",
+      "time": "2026-07-04T01:30Z",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Group K Winner",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Ghana",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M89",
+      "time": "2026-07-09T20:00Z",
+      "venue": "Gillette Stadium",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Round of 16 1 Winner",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Round of 16 2 Winner",
           "score": "0",
           "winner": false
         }
@@ -326,17 +326,17 @@
     },
     {
       "id": "M90",
-      "time": "07/04/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-10T19:00Z",
+      "venue": "SoFi Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 73",
+          "name": "Round of 16 5 Winner",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 75",
+          "name": "Round of 16 6 Winner",
           "score": "0",
           "winner": false
         }
@@ -345,17 +345,17 @@
     },
     {
       "id": "M91",
-      "time": "07/05/2026 16:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-11T21:00Z",
+      "venue": "Hard Rock Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 76",
+          "name": "Round of 16 3 Winner",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 78",
+          "name": "Round of 16 4 Winner",
           "score": "0",
           "winner": false
         }
@@ -364,17 +364,17 @@
     },
     {
       "id": "M92",
-      "time": "07/05/2026 18:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-12T01:00Z",
+      "venue": "GEHA Field at Arrowhead Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 79",
+          "name": "Round of 16 7 Winner",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 80",
+          "name": "Round of 16 8 Winner",
           "score": "0",
           "winner": false
         }
@@ -459,17 +459,17 @@
     },
     {
       "id": "M97",
-      "time": "07/09/2026 16:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-14T19:00Z",
+      "venue": "AT&T Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 89",
+          "name": "Quarterfinal 1 Winner",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 90",
+          "name": "Quarterfinal 2 Winner",
           "score": "0",
           "winner": false
         }
@@ -478,17 +478,17 @@
     },
     {
       "id": "M98",
-      "time": "07/10/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-15T19:00Z",
+      "venue": "Mercedes-Benz Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 93",
+          "name": "Quarterfinal 3 Winner",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 94",
+          "name": "Quarterfinal 4 Winner",
           "score": "0",
           "winner": false
         }
@@ -535,17 +535,17 @@
     },
     {
       "id": "M101",
-      "time": "07/14/2026 14:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-18T21:00Z",
+      "venue": "Hard Rock Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 97",
+          "name": "Semifinal 1 Loser",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 98",
+          "name": "Semifinal 2 Loser",
           "score": "0",
           "winner": false
         }
@@ -554,17 +554,17 @@
     },
     {
       "id": "M102",
-      "time": "07/15/2026 15:00",
-      "venue": "",
-      "status": "notstarted",
+      "time": "2026-07-19T19:00Z",
+      "venue": "MetLife Stadium",
+      "status": "scheduled",
       "teams": [
         {
-          "name": "Winner Match 99",
+          "name": "Semifinal 1 Winner",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Winner Match 100",
+          "name": "Semifinal 2 Winner",
           "score": "0",
           "winner": false
         }
