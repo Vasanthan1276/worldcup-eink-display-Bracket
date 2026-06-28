@@ -5,54 +5,294 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#071426">
 <title>World Cup 2026 · Home Assistant</title>
+
 <style>
-
 :root{
-  --bg:#071426;
-  --panel:#0c2039;
-  --panel2:#102b4c;
-  --line:rgba(179,211,248,.24);
-  --text:#f6f9ff;
-  --muted:#a9bdd5;
-  --accent:#4db4ff;
-  --accent2:#9cdbff;
-  --winner:#1a664f;
-  --winnerText:#dffff0;
-  --final:#f6bc3d;
-  --danger:#ff8c8c;
+  --bg:#071426; --panel:#0c2039; --panel2:#102b4c; --line:rgba(179,211,248,.24);
+  --text:#f6f9ff; --muted:#a9bdd5; --accent:#4db4ff; --accent2:#9cdbff;
+  --winner:#1a664f; --winnerText:#dffff0; --final:#f6bc3d;
 }
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
-body{padding:10px}
-.dashboard{max-width:1540px;margin:0 auto;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#0b1c32,#061220);box-shadow:0 15px 34px rgba(0,0,0,.28)}
-.head{padding:15px 18px 13px;background:linear-gradient(105deg,#123f6c,#0c2442 55%,#071527);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
-.title{font-weight:900;font-size:clamp(18px,2.2vw,30px);letter-spacing:.2px;line-height:1.05}
-.sub{margin-top:5px;color:var(--accent2);font-size:clamp(9px,1vw,12px);font-weight:800;letter-spacing:.85px}
-.updated{min-width:132px;padding:7px 9px;border:1px solid rgba(137,205,255,.43);border-radius:9px;background:rgba(0,0,0,.18);font-size:10px;line-height:1.45;text-align:right;color:var(--muted)}
-.updated b{font-size:11px;color:#dff4ff;letter-spacing:.45px}
-.grid{padding:13px;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px;align-items:stretch}
-.col{min-width:0}.label{height:25px;border-radius:7px 7px 0 0;background:#123252;border:1px solid var(--line);border-bottom:0;padding:7px 7px 5px;color:#d6ebff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:clamp(7px,.68vw,10px);font-weight:900;text-transform:uppercase;letter-spacing:.35px}.slots{height:386px;position:relative;background:rgba(3,14,26,.36);border:1px solid var(--line);border-radius:0 0 7px 7px}
-.match{position:absolute;width:calc(100% - 8px);left:4px;min-height:39px;padding:4px 5px;border:1px solid rgba(185,216,249,.35);border-radius:5px;background:linear-gradient(145deg,#143555,#0d2642);box-shadow:0 2px 5px rgba(0,0,0,.18);overflow:hidden}.match.final{left:4px;width:calc(100% - 8px);min-height:76px;padding:6px;border:2px solid var(--final);background:linear-gradient(145deg,#35415a,#1b2944);box-shadow:0 0 0 2px rgba(246,188,61,.14)}
-.meta{font-size:clamp(5px,.47vw,7px);line-height:1.35;color:#a9c9e6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.team{font-size:clamp(7px,.60vw,10px);line-height:1.35;font-weight:800;display:grid;grid-template-columns:minmax(0,1fr) 14px;gap:2px;padding:1px 2px;border-radius:3px}.team .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.team.winner{background:var(--winner);color:var(--winnerText)}.pending .name{color:#a9bdd5;font-weight:700}.score{text-align:right;font-weight:950;color:#fff}.centre{text-align:center;min-width:0}.centre .label{background:#62491b;color:#fff3c7}.trophy{font-size:clamp(25px,3.1vw,43px);line-height:1;margin-top:76px;filter:drop-shadow(0 3px 3px rgba(0,0,0,.35))}.final-title{font-size:clamp(8px,.72vw,11px);font-weight:950;color:#fff3c7;margin:8px 0 8px;letter-spacing:.35px}.final-note{font-size:clamp(6px,.53vw,8px);line-height:1.4;color:var(--muted);margin-top:9px}.foot{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding:10px 16px;color:var(--muted);font-size:11px;font-weight:700}.control{position:fixed;right:16px;bottom:16px;border:1px solid rgba(189,226,255,.56);border-radius:999px;background:#1578bf;color:#fff;padding:9px 13px;font:700 12px Inter,Arial,sans-serif;cursor:pointer;box-shadow:0 5px 16px rgba(0,0,0,.34)}
-@media(max-width:920px){body{padding:8px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:10px}.col{border:1px solid var(--line);border-radius:8px;background:rgba(5,17,31,.45);overflow:hidden}.label{border:0;border-radius:0;height:auto;min-height:30px}.slots{height:auto;position:static;display:grid;gap:7px;padding:7px;border:0;border-radius:0;background:transparent}.match,.match.final{position:relative!important;left:auto;width:100%;min-height:45px;top:auto!important}.centre{grid-column:1/-1;padding-bottom:10px}.centre .label{margin:0}.trophy{margin-top:13px}.final-title{margin:6px 0}.foot{font-size:10px;flex-wrap:wrap}.control{display:none}}
-@media(max-width:520px){body{padding:0}.dashboard{border-radius:0;border-left:0;border-right:0}.head{padding:14px 12px;gap:8px}.updated{min-width:110px;font-size:8px;padding:6px}.updated b{font-size:9px}.grid{grid-template-columns:1fr;padding:9px}.centre{grid-column:auto}.team{font-size:10px;grid-template-columns:minmax(0,1fr) 18px}.meta{font-size:8px}.foot{padding:10px 12px}}
-@media print{body{background:#fff;padding:0}.dashboard{box-shadow:none;border:0}.control{display:none}}
 
+*{box-sizing:border-box}
+
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+  overflow:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 0%,#183c61 0,transparent 35%),
+    radial-gradient(circle at 96% 0%,#412e6f 0,transparent 34%),
+    var(--bg);
+}
+
+.viewport{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+}
+
+.dashboard{
+  position:absolute;
+  left:0;
+  top:0;
+  width:1100px;
+  height:560px;
+  margin:0;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#0b1c32,#061220);
+  box-shadow:0 15px 34px rgba(0,0,0,.28);
+  transform-origin:top left;
+}
+
+.head{
+  height:83px;
+  padding:15px 18px 13px;
+  background:linear-gradient(105deg,#123f6c,#0c2442 55%,#071527);
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.title{
+  font-weight:900;
+  font-size:28px;
+  letter-spacing:.2px;
+  line-height:1.05;
+}
+
+.sub{
+  margin-top:5px;
+  color:var(--accent2);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.85px;
+}
+
+.updated{
+  min-width:132px;
+  padding:7px 9px;
+  border:1px solid rgba(137,205,255,.43);
+  border-radius:9px;
+  background:rgba(0,0,0,.18);
+  font-size:10px;
+  line-height:1.45;
+  text-align:right;
+  color:var(--muted);
+}
+
+.updated b{
+  font-size:11px;
+  color:#dff4ff;
+  letter-spacing:.45px;
+}
+
+.grid{
+  height:435px;
+  padding:13px;
+  display:grid;
+  grid-template-columns:repeat(9,minmax(0,1fr));
+  gap:8px;
+  align-items:stretch;
+}
+
+.col{min-width:0}
+
+.label{
+  height:25px;
+  border-radius:7px 7px 0 0;
+  background:#123252;
+  border:1px solid var(--line);
+  border-bottom:0;
+  padding:7px 7px 5px;
+  color:#d6ebff;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  font-size:8px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.35px;
+}
+
+.slots{
+  height:386px;
+  position:relative;
+  background:rgba(3,14,26,.36);
+  border:1px solid var(--line);
+  border-radius:0 0 7px 7px;
+}
+
+.match{
+  position:absolute;
+  width:calc(100% - 8px);
+  left:4px;
+  min-height:39px;
+  padding:4px 5px;
+  border:1px solid rgba(185,216,249,.35);
+  border-radius:5px;
+  background:linear-gradient(145deg,#143555,#0d2642);
+  box-shadow:0 2px 5px rgba(0,0,0,.18);
+  overflow:hidden;
+}
+
+.match.final{
+  min-height:76px;
+  padding:6px;
+  border:2px solid var(--final);
+  background:linear-gradient(145deg,#35415a,#1b2944);
+  box-shadow:0 0 0 2px rgba(246,188,61,.14);
+}
+
+.meta{
+  font-size:5.4px;
+  line-height:1.35;
+  color:#a9c9e6;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.team{
+  font-size:7.3px;
+  line-height:1.35;
+  font-weight:800;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 14px;
+  gap:2px;
+  padding:1px 2px;
+  border-radius:3px;
+}
+
+.team .name{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.team.winner{
+  background:var(--winner);
+  color:var(--winnerText);
+}
+
+.pending .name{
+  color:#a9bdd5;
+  font-weight:700;
+}
+
+.score{
+  text-align:right;
+  font-weight:950;
+  color:#fff;
+}
+
+.centre{
+  text-align:center;
+  min-width:0;
+}
+
+.centre .label{
+  background:#62491b;
+  color:#fff3c7;
+}
+
+.final-stage{position:relative}
+
+.final-stage .trophy{
+  position:absolute;
+  top:76px;
+  left:0;
+  width:100%;
+  margin:0;
+  font-size:38px;
+  line-height:1;
+  filter:drop-shadow(0 3px 3px rgba(0,0,0,.35));
+}
+
+.final-stage .final-title{
+  position:absolute;
+  top:124px;
+  left:0;
+  width:100%;
+  margin:0;
+  font-size:9px;
+  font-weight:950;
+  color:#fff3c7;
+  letter-spacing:.35px;
+}
+
+.final-stage .final-note{
+  position:absolute;
+  top:262px;
+  left:0;
+  width:100%;
+  margin:0;
+  color:var(--muted);
+  font-size:6.5px;
+  line-height:1.4;
+}
+
+.foot{
+  height:41px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  border-top:1px solid var(--line);
+  padding:10px 16px;
+  color:var(--muted);
+  font-size:10px;
+  font-weight:700;
+}
+
+.control{display:none}
+
+@media print{
+  .viewport{overflow:visible}
+  .dashboard{
+    position:relative;
+    transform:none!important;
+  }
+}
 </style>
 </head>
+
 <body>
+<div class="viewport">
 <main class="dashboard" aria-label="World Cup 2026 live knockout bracket">
+
 <header class="head">
   <div>
     <div class="title">WORLD CUP 2026 · ROAD TO THE FINAL</div>
     <div class="sub">LIVE KNOCKOUT BRACKET · SINGAPORE TIME (SGT)</div>
   </div>
-  <div class="updated" id="status"><b>LOADING LIVE SCORES</b><br>Preparing bracket…</div>
+
+  <div class="updated" id="status">
+    <b>LOADING LIVE SCORES</b><br>
+    Preparing bracket…
+  </div>
 </header>
+
 <section class="grid" id="bracket"></section>
-<footer class="foot"><span>Scores update automatically. Winners are highlighted.</span><span id="source">Live feed + local fallback</span></footer>
+
+<footer class="foot">
+  <span>Scores update automatically. Winners are highlighted.</span>
+  <span id="source">Live feed + local fallback</span>
+</footer>
+
 </main>
-<button class="control" onclick="location.reload()">Refresh</button>
+</div>
+
 <script>
 (() => {
   const SGT = 'Asia/Singapore';
@@ -140,9 +380,7 @@ body{padding:10px}
 
     const m=hay.match(/(?:match|game)\s*(\d{2,3})/i);
 
-    if(m) return 'M'+m[1];
-
-    return null;
+    return m ? 'M'+m[1] : null;
   }
 
   function applyRecord(rec){
@@ -163,15 +401,12 @@ body{padding:10px}
       m.score=m.teams.map(t => t?.score ?? '–');
     }
 
-    if(rec.winner){
-      m.winner=rec.winner;
-    }
+    if(rec.winner) m.winner=rec.winner;
   }
 
   function derive(){
     for(const id of Object.keys(state)){
       const m=state[id];
-
       if(!m.parents) continue;
 
       m.parents.forEach((p,i) => {
@@ -223,9 +458,9 @@ body{padding:10px}
       </div>`;
   }
 
-  function column(label,ids,tops,cls=''){
+  function column(label,ids,tops){
     return `
-      <div class="col ${cls}">
+      <div class="col">
         <div class="label">${label}</div>
         <div class="slots">
           ${ids.map((id,i)=>matchHTML(id,tops[i])).join('')}
@@ -248,12 +483,14 @@ body{padding:10px}
 
       `<div class="col centre">
         <div class="label">Final</div>
-        <div class="trophy">★</div>
-        <div class="final-title">WORLD CUP FINAL</div>
-        ${matchHTML('M104',0,'final')}
-        <div class="final-note">
-          Third-place match<br>
-          ${state.M103.time?asSGT(state.M103.time):'M103 · 19 JUL'}
+        <div class="slots final-stage">
+          <div class="trophy">★</div>
+          <div class="final-title">WORLD CUP FINAL</div>
+          ${matchHTML('M104',158,'final')}
+          <div class="final-note">
+            Third-place match<br>
+            ${state.M103.time?asSGT(state.M103.time):'M103 · 19 JUL'}
+          </div>
         </div>
       </div>` +
 
@@ -288,7 +525,6 @@ body{padding:10px}
     if(!r.ok) throw Error('fallback unavailable');
 
     const j=await r.json();
-
     (j.matches||[]).forEach(applyRecord);
 
     return j.updatedAt||null;
@@ -299,12 +535,10 @@ body{padding:10px}
 
     (j.events||[]).forEach(ev => {
       const id=eventMatchNo(ev);
-
       if(!id || !state[id]) return;
 
       const c=ev.competitions?.[0];
       const cc=c?.competitors||[];
-
       if(cc.length<2) return;
 
       const teams=cc
@@ -349,7 +583,6 @@ body{padding:10px}
 
     try{
       const r=await fetch(API,{cache:'no-store'});
-
       if(!r.ok) throw Error('live feed '+r.status);
 
       const count=mapEspn(await r.json());
@@ -374,9 +607,32 @@ body{padding:10px}
     }
   }
 
+  function scaleForFrame(){
+    const canvasW=1100;
+    const canvasH=560;
+    const pad=4;
+
+    const scale=Math.min(
+      (window.innerWidth-pad*2)/canvasW,
+      (window.innerHeight-pad*2)/canvasH
+    );
+
+    document.querySelector('.dashboard').style.transform=
+      `translate(${pad}px,${pad}px) scale(${Math.max(0.1,scale)})`;
+  }
+
   boot();
+  scaleForFrame();
+
+  window.addEventListener('resize',scaleForFrame);
+  window.addEventListener(
+    'orientationchange',
+    ()=>setTimeout(scaleForFrame,200)
+  );
+
   setInterval(boot,15*60*1000);
 })();
 </script>
+
 </body>
 </html>
