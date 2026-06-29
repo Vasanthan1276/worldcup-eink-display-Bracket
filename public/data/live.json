@@ -1,5 +1,5 @@
 {
-  "updatedAt": "30 Jun 2026 ·  04:09 SGT",
+  "updatedAt": "30 Jun 2026 ·  06:15 SGT",
   "matches": [
     {
       "id": "M73",
@@ -43,16 +43,16 @@
       "id": "M75",
       "time": "2026-06-29T20:30Z",
       "venue": "Gillette Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Germany",
-          "score": "0",
+          "score": "1",
           "winner": false
         },
         {
           "name": "Paraguay",
-          "score": "0",
+          "score": "1",
           "winner": false
         }
       ],
