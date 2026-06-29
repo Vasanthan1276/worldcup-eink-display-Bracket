@@ -1,5 +1,5 @@
 {
-  "updatedAt": "30 Jun 2026 ·  01:44 SGT",
+  "updatedAt": "30 Jun 2026 ·  04:09 SGT",
   "matches": [
     {
       "id": "M73",
@@ -24,12 +24,12 @@
       "id": "M74",
       "time": "2026-06-29T17:00Z",
       "venue": "NRG Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Brazil",
-          "score": "0",
-          "winner": false
+          "score": "2",
+          "winner": true
         },
         {
           "name": "Japan",
@@ -37,7 +37,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Brazil"
     },
     {
       "id": "M75",
