@@ -1,5 +1,5 @@
 {
-  "updatedAt": "1 Jul 2026 ·  04:11 SGT",
+  "updatedAt": "1 Jul 2026 ·  06:19 SGT",
   "matches": [
     {
       "id": "M73",
@@ -100,11 +100,11 @@
       "id": "M78",
       "time": "2026-06-30T21:00Z",
       "venue": "MetLife Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "France",
-          "score": "0",
+          "score": "2",
           "winner": false
         },
         {
