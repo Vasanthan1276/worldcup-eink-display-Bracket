@@ -1,5 +1,5 @@
 {
-  "updatedAt": "30 Jun 2026 ·  23:37 SGT",
+  "updatedAt": "1 Jul 2026 ·  02:05 SGT",
   "matches": [
     {
       "id": "M73",
@@ -81,7 +81,7 @@
       "id": "M77",
       "time": "2026-06-30T17:00Z",
       "venue": "AT&T Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Ivory Coast",
@@ -90,7 +90,7 @@
         },
         {
           "name": "Norway",
-          "score": "0",
+          "score": "1",
           "winner": false
         }
       ],
