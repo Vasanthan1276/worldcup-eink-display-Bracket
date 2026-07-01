@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2 Jul 2026 ·  02:05 SGT",
+  "updatedAt": "2 Jul 2026 ·  04:07 SGT",
   "matches": [
     {
       "id": "M73",
@@ -157,7 +157,7 @@
       "id": "M81",
       "time": "2026-07-01T20:00Z",
       "venue": "Lumen Field",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Belgium",
