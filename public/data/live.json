@@ -1,5 +1,5 @@
 {
-  "updatedAt": "1 Jul 2026 ·  08:15 SGT",
+  "updatedAt": "1 Jul 2026 ·  13:46 SGT",
   "matches": [
     {
       "id": "M73",
@@ -117,14 +117,14 @@
     },
     {
       "id": "M79",
-      "time": "2026-07-01T01:00Z",
+      "time": "2026-07-01T02:00Z",
       "venue": "Estadio Banorte",
-      "status": "scheduled",
+      "status": "final",
       "teams": [
         {
           "name": "Mexico",
-          "score": "0",
-          "winner": false
+          "score": "2",
+          "winner": true
         },
         {
           "name": "Ecuador",
@@ -132,7 +132,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Mexico"
     },
     {
       "id": "M80",
