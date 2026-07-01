@@ -1,5 +1,5 @@
 {
-  "updatedAt": "1 Jul 2026 ·  06:19 SGT",
+  "updatedAt": "1 Jul 2026 ·  08:15 SGT",
   "matches": [
     {
       "id": "M73",
@@ -100,12 +100,12 @@
       "id": "M78",
       "time": "2026-06-30T21:00Z",
       "venue": "MetLife Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "France",
-          "score": "2",
-          "winner": false
+          "score": "3",
+          "winner": true
         },
         {
           "name": "Sweden",
@@ -113,7 +113,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "France"
     },
     {
       "id": "M79",
@@ -326,6 +326,25 @@
     },
     {
       "id": "M90",
+      "time": "2026-07-04T21:00Z",
+      "venue": "Lincoln Financial Field",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Paraguay",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "France",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M91",
       "time": "2026-07-05T20:00Z",
       "venue": "MetLife Stadium",
       "status": "scheduled",
@@ -344,7 +363,7 @@
       "winner": null
     },
     {
-      "id": "M91",
+      "id": "M92",
       "time": "2026-07-09T20:00Z",
       "venue": "Gillette Stadium",
       "status": "scheduled",
@@ -363,7 +382,7 @@
       "winner": null
     },
     {
-      "id": "M92",
+      "id": "M93",
       "time": "2026-07-10T19:00Z",
       "venue": "SoFi Stadium",
       "status": "scheduled",
@@ -382,7 +401,7 @@
       "winner": null
     },
     {
-      "id": "M93",
+      "id": "M94",
       "time": "2026-07-11T21:00Z",
       "venue": "Hard Rock Stadium",
       "status": "scheduled",
@@ -401,7 +420,7 @@
       "winner": null
     },
     {
-      "id": "M94",
+      "id": "M95",
       "time": "2026-07-12T01:00Z",
       "venue": "GEHA Field at Arrowhead Stadium",
       "status": "scheduled",
@@ -413,25 +432,6 @@
         },
         {
           "name": "Round of 16 8 Winner",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M95",
-      "time": "07/07/2026 12:00",
-      "venue": "",
-      "status": "notstarted",
-      "teams": [
-        {
-          "name": "Winner Match 86",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Winner Match 88",
           "score": "0",
           "winner": false
         }
