@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2 Jul 2026 ·  08:16 SGT",
+  "updatedAt": "2 Jul 2026 ·  13:04 SGT",
   "matches": [
     {
       "id": "M73",
@@ -176,12 +176,12 @@
       "id": "M82",
       "time": "2026-07-02T00:00Z",
       "venue": "Levi's Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "United States",
-          "score": "0",
-          "winner": false
+          "score": "2",
+          "winner": true
         },
         {
           "name": "Bosnia-Herzegovina",
@@ -189,7 +189,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "United States"
     },
     {
       "id": "M83",
@@ -383,6 +383,25 @@
     },
     {
       "id": "M93",
+      "time": "2026-07-07T00:00Z",
+      "venue": "Lumen Field",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "United States",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Belgium",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M94",
       "time": "2026-07-09T20:00Z",
       "venue": "Gillette Stadium",
       "status": "scheduled",
@@ -401,7 +420,7 @@
       "winner": null
     },
     {
-      "id": "M94",
+      "id": "M95",
       "time": "2026-07-10T19:00Z",
       "venue": "SoFi Stadium",
       "status": "scheduled",
@@ -420,7 +439,7 @@
       "winner": null
     },
     {
-      "id": "M95",
+      "id": "M96",
       "time": "2026-07-11T21:00Z",
       "venue": "Hard Rock Stadium",
       "status": "scheduled",
@@ -432,25 +451,6 @@
         },
         {
           "name": "Round of 16 4 Winner",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M96",
-      "time": "2026-07-12T01:00Z",
-      "venue": "GEHA Field at Arrowhead Stadium",
-      "status": "scheduled",
-      "teams": [
-        {
-          "name": "Round of 16 7 Winner",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Round of 16 8 Winner",
           "score": "0",
           "winner": false
         }
