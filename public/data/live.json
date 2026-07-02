@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2 Jul 2026 ·  06:23 SGT",
+  "updatedAt": "2 Jul 2026 ·  08:16 SGT",
   "matches": [
     {
       "id": "M73",
@@ -157,12 +157,12 @@
       "id": "M81",
       "time": "2026-07-01T20:00Z",
       "venue": "Lumen Field",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Belgium",
-          "score": "2",
-          "winner": false
+          "score": "3",
+          "winner": true
         },
         {
           "name": "Senegal",
@@ -170,13 +170,13 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Belgium"
     },
     {
       "id": "M82",
       "time": "2026-07-02T00:00Z",
       "venue": "Levi's Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "United States",
