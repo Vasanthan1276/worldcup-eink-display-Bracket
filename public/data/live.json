@@ -1,5 +1,5 @@
 {
-  "updatedAt": "3 Jul 2026 ·  04:24 SGT",
+  "updatedAt": "3 Jul 2026 ·  06:14 SGT",
   "matches": [
     {
       "id": "M73",
@@ -195,12 +195,12 @@
       "id": "M83",
       "time": "2026-07-02T19:00Z",
       "venue": "SoFi Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Spain",
-          "score": "1",
-          "winner": false
+          "score": "3",
+          "winner": true
         },
         {
           "name": "Austria",
@@ -208,7 +208,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Spain"
     },
     {
       "id": "M84",
