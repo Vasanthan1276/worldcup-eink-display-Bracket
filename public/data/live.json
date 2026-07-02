@@ -1,5 +1,5 @@
 {
-  "updatedAt": "3 Jul 2026 ·  02:40 SGT",
+  "updatedAt": "3 Jul 2026 ·  04:24 SGT",
   "matches": [
     {
       "id": "M73",
@@ -195,11 +195,11 @@
       "id": "M83",
       "time": "2026-07-02T19:00Z",
       "venue": "SoFi Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Spain",
-          "score": "0",
+          "score": "1",
           "winner": false
         },
         {
