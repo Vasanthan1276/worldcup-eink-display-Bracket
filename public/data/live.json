@@ -1,5 +1,5 @@
 {
-  "updatedAt": "3 Jul 2026 ·  06:14 SGT",
+  "updatedAt": "3 Jul 2026 ·  08:14 SGT",
   "matches": [
     {
       "id": "M73",
@@ -214,7 +214,7 @@
       "id": "M84",
       "time": "2026-07-02T23:00Z",
       "venue": "BMO Field",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Portugal",
@@ -223,7 +223,7 @@
         },
         {
           "name": "Croatia",
-          "score": "0",
+          "score": "1",
           "winner": false
         }
       ],
