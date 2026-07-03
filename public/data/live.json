@@ -1,5 +1,5 @@
 {
-  "updatedAt": "3 Jul 2026 ·  12:50 SGT",
+  "updatedAt": "3 Jul 2026 ·  16:15 SGT",
   "matches": [
     {
       "id": "M73",
@@ -233,12 +233,12 @@
       "id": "M85",
       "time": "2026-07-03T03:00Z",
       "venue": "BC Place",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Switzerland",
           "score": "2",
-          "winner": false
+          "winner": true
         },
         {
           "name": "Algeria",
@@ -246,7 +246,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Switzerland"
     },
     {
       "id": "M86",
