@@ -1,5 +1,5 @@
 {
-  "updatedAt": "3 Jul 2026 ·  08:14 SGT",
+  "updatedAt": "3 Jul 2026 ·  12:50 SGT",
   "matches": [
     {
       "id": "M73",
@@ -214,12 +214,12 @@
       "id": "M84",
       "time": "2026-07-02T23:00Z",
       "venue": "BMO Field",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Portugal",
-          "score": "0",
-          "winner": false
+          "score": "2",
+          "winner": true
         },
         {
           "name": "Croatia",
@@ -227,17 +227,17 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Portugal"
     },
     {
       "id": "M85",
       "time": "2026-07-03T03:00Z",
       "venue": "BC Place",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Switzerland",
-          "score": "0",
+          "score": "2",
           "winner": false
         },
         {
@@ -383,6 +383,25 @@
     },
     {
       "id": "M93",
+      "time": "2026-07-06T19:00Z",
+      "venue": "AT&T Stadium",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Portugal",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Spain",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M94",
       "time": "2026-07-07T00:00Z",
       "venue": "Lumen Field",
       "status": "scheduled",
@@ -401,7 +420,7 @@
       "winner": null
     },
     {
-      "id": "M94",
+      "id": "M95",
       "time": "2026-07-09T20:00Z",
       "venue": "Gillette Stadium",
       "status": "scheduled",
@@ -420,7 +439,7 @@
       "winner": null
     },
     {
-      "id": "M95",
+      "id": "M96",
       "time": "2026-07-10T19:00Z",
       "venue": "SoFi Stadium",
       "status": "scheduled",
@@ -432,25 +451,6 @@
         },
         {
           "name": "Round of 16 6 Winner",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M96",
-      "time": "2026-07-11T21:00Z",
-      "venue": "Hard Rock Stadium",
-      "status": "scheduled",
-      "teams": [
-        {
-          "name": "Round of 16 3 Winner",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Round of 16 4 Winner",
           "score": "0",
           "winner": false
         }
