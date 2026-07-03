@@ -1,5 +1,5 @@
 {
-  "updatedAt": "4 Jul 2026 ·  00:41 SGT",
+  "updatedAt": "4 Jul 2026 ·  02:18 SGT",
   "matches": [
     {
       "id": "M73",
@@ -252,7 +252,7 @@
       "id": "M86",
       "time": "2026-07-03T18:00Z",
       "venue": "AT&T Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Australia",
@@ -261,7 +261,7 @@
         },
         {
           "name": "Egypt",
-          "score": "0",
+          "score": "1",
           "winner": false
         }
       ],
