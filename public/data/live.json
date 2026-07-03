@@ -1,5 +1,5 @@
 {
-  "updatedAt": "4 Jul 2026 ·  04:19 SGT",
+  "updatedAt": "4 Jul 2026 ·  06:11 SGT",
   "matches": [
     {
       "id": "M73",
@@ -252,7 +252,7 @@
       "id": "M86",
       "time": "2026-07-03T18:00Z",
       "venue": "AT&T Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Australia",
@@ -262,16 +262,16 @@
         {
           "name": "Egypt",
           "score": "1",
-          "winner": false
+          "winner": true
         }
       ],
-      "winner": null
+      "winner": "Egypt"
     },
     {
       "id": "M87",
       "time": "2026-07-03T22:00Z",
       "venue": "Hard Rock Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Argentina",
