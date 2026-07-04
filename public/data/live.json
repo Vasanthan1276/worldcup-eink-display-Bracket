@@ -1,5 +1,5 @@
 {
-  "updatedAt": "5 Jul 2026 ·  04:13 SGT",
+  "updatedAt": "5 Jul 2026 ·  06:04 SGT",
   "matches": [
     {
       "id": "M73",
@@ -328,7 +328,7 @@
       "id": "M90",
       "time": "2026-07-04T21:00Z",
       "venue": "Lincoln Financial Field",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Paraguay",
