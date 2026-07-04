@@ -1,5 +1,5 @@
 {
-  "updatedAt": "5 Jul 2026 ·  06:04 SGT",
+  "updatedAt": "5 Jul 2026 ·  07:07 SGT",
   "matches": [
     {
       "id": "M73",
@@ -328,7 +328,7 @@
       "id": "M90",
       "time": "2026-07-04T21:00Z",
       "venue": "Lincoln Financial Field",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Paraguay",
@@ -337,11 +337,11 @@
         },
         {
           "name": "France",
-          "score": "0",
-          "winner": false
+          "score": "1",
+          "winner": true
         }
       ],
-      "winner": null
+      "winner": "France"
     },
     {
       "id": "M91",
@@ -459,6 +459,25 @@
     },
     {
       "id": "M97",
+      "time": "2026-07-09T20:00Z",
+      "venue": "Gillette Stadium",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "France",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "Morocco",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M98",
       "time": "2026-07-14T19:00Z",
       "venue": "AT&T Stadium",
       "status": "scheduled",
@@ -477,7 +496,7 @@
       "winner": null
     },
     {
-      "id": "M98",
+      "id": "M99",
       "time": "2026-07-15T19:00Z",
       "venue": "Mercedes-Benz Stadium",
       "status": "scheduled",
@@ -489,25 +508,6 @@
         },
         {
           "name": "Quarterfinal 4 Winner",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M99",
-      "time": "07/11/2026 17:00",
-      "venue": "",
-      "status": "notstarted",
-      "teams": [
-        {
-          "name": "Winner Match 91",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Winner Match 92",
           "score": "0",
           "winner": false
         }
