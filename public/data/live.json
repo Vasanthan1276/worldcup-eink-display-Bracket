@@ -1,5 +1,5 @@
 {
-  "updatedAt": "4 Jul 2026 ·  08:13 SGT",
+  "updatedAt": "4 Jul 2026 ·  12:41 SGT",
   "matches": [
     {
       "id": "M73",
@@ -271,31 +271,31 @@
       "id": "M87",
       "time": "2026-07-03T22:00Z",
       "venue": "Hard Rock Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Argentina",
-          "score": "2",
-          "winner": false
+          "score": "3",
+          "winner": true
         },
         {
           "name": "Cape Verde",
-          "score": "1",
+          "score": "2",
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Argentina"
     },
     {
       "id": "M88",
       "time": "2026-07-04T01:30Z",
       "venue": "GEHA Field at Arrowhead Stadium",
-      "status": "scheduled",
+      "status": "final",
       "teams": [
         {
           "name": "Colombia",
-          "score": "0",
-          "winner": false
+          "score": "1",
+          "winner": true
         },
         {
           "name": "Ghana",
@@ -303,7 +303,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Colombia"
     },
     {
       "id": "M89",
@@ -421,17 +421,17 @@
     },
     {
       "id": "M95",
-      "time": "2026-07-09T20:00Z",
-      "venue": "Gillette Stadium",
+      "time": "2026-07-07T16:00Z",
+      "venue": "Mercedes-Benz Stadium",
       "status": "scheduled",
       "teams": [
         {
-          "name": "Round of 16 1 Winner",
+          "name": "Argentina",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Round of 16 2 Winner",
+          "name": "Egypt",
           "score": "0",
           "winner": false
         }
@@ -440,17 +440,17 @@
     },
     {
       "id": "M96",
-      "time": "2026-07-10T19:00Z",
-      "venue": "SoFi Stadium",
+      "time": "2026-07-07T20:00Z",
+      "venue": "BC Place",
       "status": "scheduled",
       "teams": [
         {
-          "name": "Round of 16 5 Winner",
+          "name": "Switzerland",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Round of 16 6 Winner",
+          "name": "Colombia",
           "score": "0",
           "winner": false
         }
