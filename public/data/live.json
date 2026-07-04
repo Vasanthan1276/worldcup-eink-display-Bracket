@@ -1,5 +1,5 @@
 {
-  "updatedAt": "5 Jul 2026 ·  00:10 SGT",
+  "updatedAt": "5 Jul 2026 ·  02:08 SGT",
   "matches": [
     {
       "id": "M73",
@@ -309,7 +309,7 @@
       "id": "M89",
       "time": "2026-07-04T17:00Z",
       "venue": "NRG Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Canada",
