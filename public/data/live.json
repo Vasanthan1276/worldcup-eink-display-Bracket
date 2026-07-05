@@ -1,5 +1,5 @@
 {
-  "updatedAt": "6 Jul 2026 ·  03:36 SGT",
+  "updatedAt": "6 Jul 2026 ·  05:11 SGT",
   "matches": [
     {
       "id": "M73",
@@ -347,7 +347,7 @@
       "id": "M91",
       "time": "2026-07-05T20:00Z",
       "venue": "MetLife Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Brazil",
