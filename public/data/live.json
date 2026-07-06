@@ -1,5 +1,5 @@
 {
-  "updatedAt": "6 Jul 2026 ·  07:09 SGT",
+  "updatedAt": "6 Jul 2026 ·  12:17 SGT",
   "matches": [
     {
       "id": "M73",
@@ -364,22 +364,22 @@
     },
     {
       "id": "M92",
-      "time": "2026-07-06T00:00Z",
+      "time": "2026-07-06T01:00Z",
       "venue": "Estadio Banorte",
-      "status": "scheduled",
+      "status": "final",
       "teams": [
         {
           "name": "Mexico",
-          "score": "0",
+          "score": "2",
           "winner": false
         },
         {
           "name": "England",
-          "score": "0",
-          "winner": false
+          "score": "3",
+          "winner": true
         }
       ],
-      "winner": null
+      "winner": "England"
     },
     {
       "id": "M93",
@@ -478,6 +478,25 @@
     },
     {
       "id": "M98",
+      "time": "2026-07-11T21:00Z",
+      "venue": "Hard Rock Stadium",
+      "status": "scheduled",
+      "teams": [
+        {
+          "name": "Norway",
+          "score": "0",
+          "winner": false
+        },
+        {
+          "name": "England",
+          "score": "0",
+          "winner": false
+        }
+      ],
+      "winner": null
+    },
+    {
+      "id": "M99",
       "time": "2026-07-14T19:00Z",
       "venue": "AT&T Stadium",
       "status": "scheduled",
@@ -496,7 +515,7 @@
       "winner": null
     },
     {
-      "id": "M99",
+      "id": "M100",
       "time": "2026-07-15T19:00Z",
       "venue": "Mercedes-Benz Stadium",
       "status": "scheduled",
@@ -508,25 +527,6 @@
         },
         {
           "name": "Quarterfinal 4 Winner",
-          "score": "0",
-          "winner": false
-        }
-      ],
-      "winner": null
-    },
-    {
-      "id": "M100",
-      "time": "07/11/2026 20:00",
-      "venue": "",
-      "status": "notstarted",
-      "teams": [
-        {
-          "name": "Winner Match 95",
-          "score": "0",
-          "winner": false
-        },
-        {
-          "name": "Winner Match 96",
           "score": "0",
           "winner": false
         }
