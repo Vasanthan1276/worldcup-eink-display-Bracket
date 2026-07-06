@@ -1,5 +1,5 @@
 {
-  "updatedAt": "7 Jul 2026 ·  04:55 SGT",
+  "updatedAt": "7 Jul 2026 ·  06:20 SGT",
   "matches": [
     {
       "id": "M73",
@@ -385,7 +385,7 @@
       "id": "M93",
       "time": "2026-07-06T19:00Z",
       "venue": "AT&T Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Portugal",
@@ -395,10 +395,10 @@
         {
           "name": "Spain",
           "score": "1",
-          "winner": false
+          "winner": true
         }
       ],
-      "winner": null
+      "winner": "Spain"
     },
     {
       "id": "M94",
