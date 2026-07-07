@@ -1,5 +1,5 @@
 {
-  "updatedAt": "8 Jul 2026 ·  05:38 SGT",
+  "updatedAt": "8 Jul 2026 ·  07:08 SGT",
   "matches": [
     {
       "id": "M73",
@@ -442,12 +442,12 @@
       "id": "M96",
       "time": "2026-07-07T20:00Z",
       "venue": "BC Place",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Switzerland",
           "score": "0",
-          "winner": false
+          "winner": true
         },
         {
           "name": "Colombia",
@@ -455,7 +455,7 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Switzerland"
     },
     {
       "id": "M97",
@@ -516,17 +516,17 @@
     },
     {
       "id": "M100",
-      "time": "2026-07-14T19:00Z",
-      "venue": "AT&T Stadium",
+      "time": "2026-07-12T01:00Z",
+      "venue": "GEHA Field at Arrowhead Stadium",
       "status": "scheduled",
       "teams": [
         {
-          "name": "Quarterfinal 1 Winner",
+          "name": "Argentina",
           "score": "0",
           "winner": false
         },
         {
-          "name": "Quarterfinal 2 Winner",
+          "name": "Switzerland",
           "score": "0",
           "winner": false
         }
