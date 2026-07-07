@@ -1,5 +1,5 @@
 {
-  "updatedAt": "8 Jul 2026 ·  01:23 SGT",
+  "updatedAt": "8 Jul 2026 ·  04:06 SGT",
   "matches": [
     {
       "id": "M73",
@@ -423,12 +423,12 @@
       "id": "M95",
       "time": "2026-07-07T16:00Z",
       "venue": "Mercedes-Benz Stadium",
-      "status": "live",
+      "status": "final",
       "teams": [
         {
           "name": "Argentina",
-          "score": "0",
-          "winner": false
+          "score": "3",
+          "winner": true
         },
         {
           "name": "Egypt",
@@ -436,13 +436,13 @@
           "winner": false
         }
       ],
-      "winner": null
+      "winner": "Argentina"
     },
     {
       "id": "M96",
       "time": "2026-07-07T20:00Z",
       "venue": "BC Place",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Switzerland",
