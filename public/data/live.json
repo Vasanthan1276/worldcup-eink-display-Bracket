@@ -1,5 +1,5 @@
 {
-  "updatedAt": "20 Jul 2026 ·  01:08 SGT",
+  "updatedAt": "20 Jul 2026 ·  03:16 SGT",
   "matches": [
     {
       "id": "M73",
@@ -594,7 +594,7 @@
       "id": "M104",
       "time": "2026-07-19T19:00Z",
       "venue": "MetLife Stadium",
-      "status": "scheduled",
+      "status": "live",
       "teams": [
         {
           "name": "Spain",
